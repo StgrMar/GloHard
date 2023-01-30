@@ -1,11 +1,4 @@
 'use strict'
-// lesson02
-// let num = 266219;
-// let splitting = ('' + num).split('').map(Number)
-// let multiply = splitting.reduce((a,b)=> a*b);
-// let step = (multiply ** 3).toString();
-// console.log(step.substring(0,2))
-
 
 //lesson03
 // let lang = confirm('Вывести дни на русском языке?');
@@ -41,5 +34,27 @@
 // let nameFromPrompt;
 // nameFromPrompt = namePerson === 'Артем' ? 'Директор' : namePerson === 'Алекс' ? 'Преподаватель' : 'студент';
 // alert(namePerson + " " + nameFromPrompt)
+
+// lesson04
+
+let lang = prompt('Введите текст:', ' текст ');
+
+
+function langPrompt(a) {
+    console.log(typeof a);
+    if (typeof a !== 'string') {
+        alert('Введите текст!');
+        return
+    };
+
+    if (a.length >= 30) {
+        return console.log(a.trim().substring(0, 30) + '...');
+    } else {
+        return console.log(a.trim());
+
+    }
+     
+};
+langPrompt(lang);
 
 
